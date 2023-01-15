@@ -51,12 +51,13 @@ fn inhibit() -> std::process::Child {
 fn sound_playing() -> bool {
     let pactl_output = std::process::Command::new("pactl")
         .arg("list")
+        .arg("sinks")
         .output()
-        .expect("Canot run `pactl list`")
+        .expect("Canot run `pactl list sinks`")
         .stdout;
 
     let output = String::from_utf8(pactl_output)
-        .expect("Non UTF8 `pactl list` output");
+        .expect("Non UTF8 `pactl list sinks` output");
 
     output.contains("State: RUNNING")
 }
