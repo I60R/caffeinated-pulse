@@ -1,5 +1,5 @@
 [package]
-name = "caffeine-pulse"
+name = "caffeinated-pulse"
 authors = ["160R@protonmail.com"]
 version = "0.1.0"
 edition = "2021"

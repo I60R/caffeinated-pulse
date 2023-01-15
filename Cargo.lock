@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "caffeine-pulse"
+name = "caffeinated-pulse"
 version = "0.1.0"
