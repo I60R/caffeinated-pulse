@@ -43,7 +43,7 @@ fn inhibit() -> std::process::Child {
         .arg("--who=caffeine-pulse")
         .arg("--why='sound is playing'")
         .arg("sleep")
-        .arg("10000000d")
+        .arg(format!("{}d", i32::MAX))
         .spawn()
         .expect("Cannot spawn `systemd-inhibit`")
 }
